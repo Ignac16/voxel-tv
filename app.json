@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "oblecta-tv",
-    "slug": "oblecta-tv",
+    "name": "banana-tv",
+    "slug": "banana-tv",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "oblectatv",
+    "scheme": "bananatv",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -17,7 +17,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.ignaciete.bananatv"
     },
     "web": {
       "output": "static",
@@ -32,11 +33,20 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-image",
+      "expo-status-bar",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "41235219-3ded-4b04-984c-a6a7ec397e69"
+      }
     }
   }
 }

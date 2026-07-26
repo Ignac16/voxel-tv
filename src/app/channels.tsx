@@ -3,19 +3,8 @@ import { SymbolView } from 'expo-symbols';
 import { Platform, Pressable, ScrollView, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Linking } from 'react-native';
-// Minimal replacement for missing ExternalLink component
-import type { ReactNode } from 'react';
-
-function ExternalLink({ href, children, asChild }: { href: string; children: ReactNode; asChild?: boolean }) {
-  const handlePress = () => Linking.openURL(href);
-  if (asChild) return <>{children}</>;
-  return (
-    <Pressable onPress={handlePress}>
-      {children}
-    </Pressable>
-  );
-}
+import { AnimatedIcon } from '@/components/animated-icon';
+import { ExternalLink } from '@/components/external-link';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { Collapsible } from '@/components/ui/collapsible';
@@ -50,7 +39,8 @@ export default function TabTwoScreen() {
       contentContainerStyle={[styles.contentContainer, contentPlatformStyle]}>
       <ThemedView style={styles.container}>
         <ThemedView style={styles.titleContainer}>
-          <ThemedText type="subtitle">📺 Channels</ThemedText>
+          <AnimatedIcon />
+          <ThemedText type="title">📺 Channels</ThemedText>
           <ThemedText style={styles.centerText} themeColor="textSecondary">
             This page is where you can explore{'\n'} different channels categories.
           </ThemedText>
