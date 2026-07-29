@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "banana-tv",
-    "slug": "banana-tv",
+    "name": "Voxel TV",
+    "slug": "voxel-tv",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "bananatv",
+    "scheme": "voxeltv",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -18,7 +18,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.ignaciete.bananatv"
+      "package": "com.voxel.voxeltv"
     },
     "web": {
       "output": "static",
@@ -45,7 +45,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "41235219-3ded-4b04-984c-a6a7ec397e69"
+        "projectId":"651e75d1-e81b-4593-85da-c4597289de97"
       }
     }
   }

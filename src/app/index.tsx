@@ -34,7 +34,7 @@ export default function HomeScreen() {
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Banana TV
+            Welcome to&nbsp;Voxel TV
           </ThemedText>
         </ThemedView>
 
