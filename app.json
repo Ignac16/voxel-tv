@@ -18,7 +18,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.voxel.voxeltv"
+      "package": "com.voxelservices.voxeltv"
     },
     "web": {
       "output": "static",
