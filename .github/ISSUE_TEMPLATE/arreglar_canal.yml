@@ -1,0 +1,26 @@
+name: ✕ Arreglar canal
+description: Introducir datos del canal que falla.
+title: ✕ Arreglar canal
+body:
+  - type: input
+    attributes:
+      label: Nombre del canal
+      description: Introduzca el nombre del canal a revisar
+      placeholder: La1, La2, Antena3, Cuatro, Telecinco...
+      value: CANAL
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Estado del canal
+      description: Introduzca el estado del canal a revisar
+      options:
+        - label: NO CARGA
+          required: false
+        - label: SE INTERRUMPE
+          required: false
+        - label: OTRA COSA
+          required: false
+  - type: markdown
+    attributes:
+      value: ❤️👍 Gracias por contribuir!
