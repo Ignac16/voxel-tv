@@ -6,7 +6,9 @@ import { AnimatedIcon } from '@/components/animated-icon';
 import { HintRow } from '@/components/hint-row';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { ChannelList } from '@/components/channel-list';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+import { loadChannels } from '@/utils/loadChannels';
 
 function getDevMenuHint() {
   if (Platform.OS === 'web') {
@@ -28,6 +30,8 @@ function getDevMenuHint() {
 }
 
 export default function HomeScreen() {
+  const channels = loadChannels();
+
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
@@ -38,21 +42,11 @@ export default function HomeScreen() {
           </ThemedText>
         </ThemedView>
 
-        <ThemedText type="code" style={styles.code}>
-          get started
+        <ThemedText type="default" style={styles.channelsTitle}>
+          Channels
         </ThemedText>
 
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
+        <ChannelList channels={channels} />
 
       </SafeAreaView>
     </ThemedView>
@@ -83,14 +77,10 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
   },
-  code: {
-    textTransform: 'uppercase',
-  },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+  channelsTitle: {
+    fontSize: 20,
+    fontWeight: '400',
+    textAlign: 'left',
+    alignSelf: 'flex-start',
   },
 });

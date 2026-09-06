@@ -1,0 +1,17 @@
+#EXTM3U
+## Created with Golumi Video Platform
+
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audios",NAME="Castellano",LANGUAGE="spa",CHANNELS="2",DEFAULT=YES,AUTOSELECT=YES
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audios",NAME="Original",LANGUAGE="qaa",CHANNELS="2",DEFAULT=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_a_39.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audios",NAME="Audio Descripcion",LANGUAGE="ads",CHANNELS="2",DEFAULT=NO,AUTOSELECT=YES,CHARACTERISTICS="public.accessibility.describes-video",URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_a_195.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subtitulos",NAME="Español",LANGUAGE="es",DEFAULT=NO,FORCED=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subtitulos",NAME="Inglés",LANGUAGE="en",DEFAULT=NO,FORCED=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subtitulos",NAME="Gallego",LANGUAGE="gl",DEFAULT=NO,FORCED=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_gl.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subtitulos",NAME="Catalán",LANGUAGE="ca",DEFAULT=NO,FORCED=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_ca.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subtitulos",NAME="Euskera",LANGUAGE="eu",DEFAULT=NO,FORCED=NO,URI="https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_eu.m3u8"
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3012608,AVERAGE-BANDWIDTH=3012608,RESOLUTION=1280x720,CODECS="avc1.640029,mp4a.40.2",AUDIO="audios",SUBTITLES="subtitulos"
+https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_720.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2025472,AVERAGE-BANDWIDTH=2025472,RESOLUTION=1024x576,CODECS="avc1.640029,mp4a.40.2",AUDIO="audios",SUBTITLES="subtitulos"
+https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_576.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1155072,AVERAGE-BANDWIDTH=1155072,RESOLUTION=640x360,CODECS="avc1.640029,mp4a.40.2",AUDIO="audios",SUBTITLES="subtitulos"
+https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr_360.m3u8
