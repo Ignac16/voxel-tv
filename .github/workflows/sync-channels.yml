@@ -5,8 +5,6 @@ on:
     branches:
       - main
       - master
-    paths:
-      - 'src/constants/Voxel_TV_database.xlsx'
 
 permissions:
   contents: write
@@ -22,15 +20,27 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           persist-credentials: true
       
+      - name: Check if Excel file changed
+        id: check-excel
+        run: |
+          if git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep -q "src/constants/Voxel_TV_database.xlsx"; then
+            echo "excel_changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "excel_changed=false" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Setup Node.js
+        if: steps.check-excel.outputs.excel_changed == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       
       - name: Install dependencies
+        if: steps.check-excel.outputs.excel_changed == 'true'
         run: npm install xlsx
       
       - name: Sync Excel to JSON
+        if: steps.check-excel.outputs.excel_changed == 'true'
         run: |
           node -e "
           const XLSX = require('xlsx');
@@ -44,6 +54,7 @@ jobs:
           "
       
       - name: Commit changes
+        if: steps.check-excel.outputs.excel_changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
