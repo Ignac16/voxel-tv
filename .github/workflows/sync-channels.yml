@@ -17,18 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-      
-      - name: Verify PAT_TOKEN is set
-        run: |
-          if [ -z "${{ secrets.PAT_TOKEN }}" ]; then
-            echo "Error: PAT_TOKEN secret is not set. Please add it in repository settings."
-            echo "Go to: Repository Settings → Secrets and variables → Actions → New repository secret"
-            echo "Name: PAT_TOKEN"
-            echo "Value: Your GitHub Personal Access Token with 'repo' scope"
-            exit 1
-          fi
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -57,4 +47,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add src/constants/channels.json
           git diff --staged --quiet || git commit -m "Sync channels.json with Excel database"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ignac16/voxel-tv.git
