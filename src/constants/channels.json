@@ -54,176 +54,185 @@
   },
   {
     "Nº": 10,
-    "NOMBRE": "Canal Hollywood"
+    "NOMBRE": "Canal Hollywood",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/63_ch.png"
   },
   {
     "Nº": 11,
-    "NOMBRE": "TNT"
+    "NOMBRE": "Sundance TV",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/64_stv.png"
   },
   {
     "Nº": 12,
-    "NOMBRE": "Sundance TV"
+    "NOMBRE": "Dark",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/65_dark.png"
   },
   {
     "Nº": 13,
-    "NOMBRE": "Dark"
+    "NOMBRE": "Somos",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/66_somos.png"
   },
   {
     "Nº": 14,
-    "NOMBRE": "Somos"
-  },
-  {
-    "Nº": 15,
     "NOMBRE": "Warner TV",
     "STREAM": "http://200.35.176.154:8000/play/a032 "
   },
   {
-    "Nº": 16,
+    "Nº": 15,
     "NOMBRE": "Calle 13"
   },
   {
-    "Nº": 17,
+    "Nº": 16,
     "NOMBRE": "Star Channel",
     "STREAM": "http://200.35.176.154:8000/play/a03s "
   },
   {
-    "Nº": 18,
+    "Nº": 17,
     "NOMBRE": "AXN",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/37_axn.png",
     "STREAM": "http://179.60.224.196:8000/play/a0hg"
   },
   {
-    "Nº": 19,
+    "Nº": 18,
     "NOMBRE": "COSMO"
   },
   {
-    "Nº": 20,
+    "Nº": 19,
     "NOMBRE": "SyFy"
   },
   {
-    "Nº": 21,
+    "Nº": 20,
     "NOMBRE": "BBC Series",
     "STREAM": "https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8 "
   },
   {
-    "Nº": 22,
+    "Nº": 21,
     "NOMBRE": "National Geographic",
     "STREAM": "http://181.78.12.119:16123/play/ch30 "
   },
   {
-    "Nº": 23,
+    "Nº": 22,
     "NOMBRE": "BBC Top Gear",
     "STREAM": "https://jmp2.uk/stvp-ES2700002YP "
   },
   {
-    "Nº": 24,
+    "Nº": 23,
     "NOMBRE": "Nat Geo Wild"
   },
   {
-    "Nº": 25,
+    "Nº": 24,
     "NOMBRE": "Canal Historia",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/36_historia.png",
     "STREAM": "https://d1k3vzh2ivy22k.cloudfront.net/Historia1080.m3u8"
   },
   {
-    "Nº": 26,
-    "NOMBRE": "Odisea"
+    "Nº": 25,
+    "NOMBRE": "Odisea",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/69_ods.png"
   },
   {
-    "Nº": 27,
+    "Nº": 26,
     "NOMBRE": "AMC",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/34_amc.png",
     "STREAM": "https://amc-amcespanol-1-us.plex.wurl.tv/playlist.m3u8"
   },
   {
-    "Nº": 28,
-    "NOMBRE": "Canal Cocina"
+    "Nº": 27,
+    "NOMBRE": "Canal Cocina",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/70_cc.png"
   },
   {
-    "Nº": 29,
+    "Nº": 28,
     "NOMBRE": "Canal Decasa"
   },
   {
-    "Nº": 30,
+    "Nº": 29,
     "NOMBRE": "Enfamilia"
   },
   {
-    "Nº": 31,
+    "Nº": 30,
     "NOMBRE": "DKISS",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/19_dkiss.png"
   },
   {
-    "Nº": 32,
+    "Nº": 31,
     "NOMBRE": "DMAX"
   },
   {
-    "Nº": 33,
+    "Nº": 32,
     "NOMBRE": "Divinity",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/16_divinity.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/dvnty.mpd"
   },
   {
-    "Nº": 34,
+    "Nº": 33,
     "NOMBRE": "Nova",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/12_nova.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/nova.mpd"
   },
   {
-    "Nº": 35,
+    "Nº": 34,
     "NOMBRE": "Neox",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/11_neox.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/neox.mpd"
   },
   {
-    "Nº": 36,
+    "Nº": 35,
     "NOMBRE": "MEGA",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/13_mega.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/mega.mpd"
   },
   {
-    "Nº": 37,
+    "Nº": 36,
     "NOMBRE": "TRECE",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/21_13.png",
     "STREAM": "https://play.cdn.enetres.net/091DB7AFBD77442B9BA2F141DCC182F5021/021/playlist.m3u8 "
   },
   {
-    "Nº": 38,
+    "Nº": 37,
     "NOMBRE": "Energy",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/17_energy.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/energy.mpd"
   },
   {
-    "Nº": 39,
+    "Nº": 38,
     "NOMBRE": "FDF",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/15_fdf.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/fdf.mpd"
   },
   {
-    "Nº": 40,
+    "Nº": 39,
     "NOMBRE": "A3Series",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/14_a3s.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/a3s.mpd"
   },
   {
-    "Nº": 41,
+    "Nº": 40,
     "NOMBRE": "BeMad",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/27_bm.png",
     "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/bmad.mpd"
   },
   {
-    "Nº": 42,
+    "Nº": 41,
     "NOMBRE": "Squirrel",
     "STREAM": "https://tsw.streamingwebtv24.it:1936/inteccdn1/inteccdn1/playlist.m3u8 "
   },
   {
-    "Nº": 43,
+    "Nº": 42,
     "NOMBRE": "BOM Cine",
     "STREAM": "https://tsw.streamingwebtv24.it:1936/inteccdn3/inteccdn3/playlist.m3u8 "
   },
   {
-    "Nº": 44,
+    "Nº": 43,
     "NOMBRE": "Planeta de Cine",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/67_pdc.png",
     "STREAM": "https://planetadecine-tivify.ssai.tcscdn.net/playlist_0.m3u8"
+  },
+  {
+    "Nº": 44,
+    "NOMBRE": "Film&Co",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/68_fac.png",
+    "STREAM": "https://filmandco-tivify.ssai.tcscdn.net/playlist_0.m3u8"
   },
   {
     "Nº": 45,
@@ -272,11 +281,13 @@
     "NOMBRE": "Eurosport 2"
   },
   {
-    "Nº": 55
+    "Nº": 55,
+    "NOMBRE": "DAZN MotoGP"
   },
   {
     "Nº": 56,
-    "NOMBRE": "Tennis Channel"
+    "NOMBRE": "Tennis Channel",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/71_tc.png"
   },
   {
     "Nº": 57,
@@ -340,6 +351,7 @@
   {
     "Nº": 70,
     "NOMBRE": "Anime Visión",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/62_av.png",
     "STREAM": "https://animevision-tivify.ssai.tcscdn.net/playlist_0.m3u8"
   },
   {
@@ -381,6 +393,7 @@
   {
     "Nº": 78,
     "NOMBRE": "El Toro TV",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/73_ettv.png",
     "STREAM": "https://streaming-1.eltorotv.com/lb0/eltorotv-streaming-web/index.m3u8 "
   },
   {
@@ -391,6 +404,7 @@
   {
     "Nº": 80,
     "NOMBRE": "Mezzo Live",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/72_ml.png",
     "STREAM": "http://stream.mcquack.net/276/index.m3u8 "
   },
   {
@@ -416,16 +430,19 @@
   {
     "Nº": 85,
     "NOMBRE": "Euronews",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/29_en.png",
     "STREAM": "https://euronews-live-spa-es.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6571/bitok/eyJzdGlkIjoiMDA0YjY0NTMtYjY2MC00ZTZkLTlkNzEtMTk3YTM3ZDZhZWIxIiwibWt0IjoiZXMiLCJjaCI6NjU3MSwicHRmIjoxfQ==/26034/euronews-es.m3u8 "
   },
   {
     "Nº": 86,
     "NOMBRE": "Al Jazeera English",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/76_alj.png",
     "STREAM": "https://live-hls-web-aje-gcp.thehlive.com/AJE/04.m3u8 "
   },
   {
     "Nº": 87,
     "NOMBRE": "France 24",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/75_f24.png",
     "STREAM": "https://live.france24.com/hls/live/2037220/F24_ES_HI_HLS/master_5000.m3u8 "
   },
   {
@@ -446,6 +463,7 @@
   {
     "Nº": 91,
     "NOMBRE": "Deutsche Welle",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/74_dw.png",
     "STREAM": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/stream04/streamPlaylist.m3u8 "
   },
   {
@@ -456,6 +474,7 @@
   {
     "Nº": 93,
     "NOMBRE": "Canal Sur Andalucía",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/43_csa.png",
     "STREAM": "https://dfk2a268yviz9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ddiii1m6jt6of/CanalSurAndaluciaES.m3u8 "
   },
   {
@@ -466,31 +485,37 @@
   {
     "Nº": 95,
     "NOMBRE": "CMM TV",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/78_cmm.png",
     "STREAM": "https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_gnz6ity9/protocol/https/format/applehttp/flavorIds/1_a9gxgxzy,1_v71ryg4b,1_vbfvtjw6,1_obo1bqsx,1_3shk3s5d/a.m3u8 "
   },
   {
     "Nº": 96,
     "NOMBRE": "TV3 Cat",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/53_tv3cat.png",
     "STREAM": "https://directes3-tv-int.3catdirectes.cat/live-content/tvi-hls/master.m3u8"
   },
   {
     "Nº": 97,
     "NOMBRE": "Galicia TV Europa",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/77_gtv.png",
     "STREAM": "https://crtvg-europa.flumotion.cloud/crtvg/europa_high/chunks.m3u8 "
   },
   {
     "Nº": 98,
     "NOMBRE": "ETB 1",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/50_etb1.png",
     "STREAM": "https://cdn1.etbon.eus/etb1/index.m3u8"
   },
   {
     "Nº": 99,
     "NOMBRE": "ETB 2",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/51_etb2.png",
     "STREAM": "https://cdn1.etbon.eus/etb2/index.m3u8 "
   },
   {
     "Nº": 100,
     "NOMBRE": "Aragón TV Internacional",
+    "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/49_artvhd.png",
     "STREAM": "https://eu-a1-p-e-0b0e07cfe400b5ag3.cdn.mdstrm.com/live-stream-mp/dtmqa0td0lg1v/b9ba794c3d21470db3b37eea44518986/69934178aea15ae34fa39ad0/index_1.m3u8"
   },
   {
