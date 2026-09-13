@@ -1,0 +1,48 @@
+name: Sync Excel to JSON
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'src/constants/Voxel_TV_database.xlsx'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install xlsx
+      
+      - name: Sync Excel to JSON
+        run: |
+          node -e "
+          const XLSX = require('xlsx');
+          const fs = require('fs');
+          const workbook = XLSX.readFile('src/constants/Voxel_TV_database.xlsx');
+          const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets[sheetName];
+          const data = XLSX.utils.sheet_to_json(sheet);
+          fs.writeFileSync('src/constants/channels.json', JSON.stringify(data, null, 2));
+          console.log('Channels synced successfully');
+          "
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/constants/channels.json
+          git diff --staged --quiet || git commit -m "Sync channels.json with Excel database"
+          git push

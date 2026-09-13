@@ -16,12 +16,22 @@ interface ChannelCardProps {
 function ChannelCard({ channel }: ChannelCardProps) {
   return (
     <ThemedView type="backgroundElement" style={styles.channelCard}>
-      <ThemedText type="subtitle" style={styles.channelNumber}>
-        {channel['Nº']}
-      </ThemedText>
-      <ThemedText type="default" style={styles.channelName}>
-        {channel.NOMBRE}
-      </ThemedText>
+      {channel.LOGO ? (
+        <Image 
+          source={{ uri: channel.LOGO }} 
+          style={styles.channelLogo}
+          resizeMode="contain"
+        />
+      ) : (
+        <>
+          <ThemedText type="subtitle" style={styles.channelNumber}>
+            {channel['Nº']}
+          </ThemedText>
+          <ThemedText type="default" style={styles.channelName}>
+            {channel.NOMBRE}
+          </ThemedText>
+        </>
+      )}
     </ThemedView>
   );
 }
@@ -135,6 +145,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 120,
+  },
+  channelLogo: {
+    width: '100%',
+    height: 80,
+    resizeMode: 'contain',
   },
   channelNumber: {
     fontSize: 24,

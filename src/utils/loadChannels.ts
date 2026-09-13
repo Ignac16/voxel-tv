@@ -3,6 +3,7 @@ import channelsData from '@/constants/channels.json';
 export interface Channel {
   'Nº': number;
   NOMBRE: string;
+  LOGO?: string;
   STREAM?: string;
 }
 
