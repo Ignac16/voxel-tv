@@ -11,36 +11,40 @@ const CHANNEL_CARD_WIDTH = (SCREEN_WIDTH - Spacing.six * 2 - Spacing.four) / CHA
 
 interface ChannelCardProps {
   channel: Channel;
+  onPress?: (channel: Channel) => void;
 }
 
-function ChannelCard({ channel }: ChannelCardProps) {
+function ChannelCard({ channel, onPress }: ChannelCardProps) {
   return (
-    <ThemedView type="backgroundElement" style={styles.channelCard}>
-      {channel.LOGO ? (
-        <Image 
-          source={{ uri: channel.LOGO }} 
-          style={styles.channelLogo}
-          resizeMode="contain"
-        />
-      ) : (
-        <>
-          <ThemedText type="subtitle" style={styles.channelNumber}>
-            {channel['Nº']}
-          </ThemedText>
-          <ThemedText type="default" style={styles.channelName}>
-            {channel.NOMBRE}
-          </ThemedText>
-        </>
-      )}
-    </ThemedView>
+    <TouchableOpacity onPress={() => onPress?.(channel)} disabled={!channel.STREAM}>
+      <ThemedView type="backgroundElement" style={styles.channelCard}>
+        {channel.LOGO ? (
+          <Image 
+            source={{ uri: channel.LOGO }} 
+            style={styles.channelLogo}
+            resizeMode="contain"
+          />
+        ) : (
+          <>
+            <ThemedText type="subtitle" style={styles.channelNumber}>
+              {channel['Nº']}
+            </ThemedText>
+            <ThemedText type="default" style={styles.channelName}>
+              {channel.NOMBRE}
+            </ThemedText>
+          </>
+        )}
+      </ThemedView>
+    </TouchableOpacity>
   );
 }
 
 interface ChannelListProps {
   channels: Channel[];
+  onChannelPress?: (channel: Channel) => void;
 }
 
-export function ChannelList({ channels }: ChannelListProps) {
+export function ChannelList({ channels, onChannelPress }: ChannelListProps) {
   const scrollViewRef = useRef<ScrollView>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -100,7 +104,7 @@ export function ChannelList({ channels }: ChannelListProps) {
             {channels
               .slice(pageIndex * CHANNELS_PER_PAGE, (pageIndex + 1) * CHANNELS_PER_PAGE)
               .map((channel) => (
-                <ChannelCard key={channel['Nº']} channel={channel} />
+                <ChannelCard key={channel['Nº']} channel={channel} onPress={onChannelPress} />
               ))}
           </View>
         ))}

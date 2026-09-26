@@ -3,12 +3,15 @@
     "name": "Voxel TV",
     "slug": "voxel-tv",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "voxeltv",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "config": {
+        "allowsLocalNetworking": true
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +21,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.voxelservices.voxeltv"
+      "package": "com.voxelservices.voxeltv",
+      "usesCleartextTraffic": true
     },
     "web": {
       "output": "static",
@@ -36,7 +40,9 @@
       ],
       "expo-image",
       "expo-status-bar",
-      "expo-web-browser"
+      "expo-web-browser",
+      "expo-screen-orientation",
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,
@@ -45,7 +51,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId":"651e75d1-e81b-4593-85da-c4597289de97"
+        "projectId": "651e75d1-e81b-4593-85da-c4597289de97"
       }
     }
   }
