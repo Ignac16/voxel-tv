@@ -15,25 +15,25 @@
     "Nº": 3,
     "NOMBRE": "Antena3",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/3_a3.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@mainmain/src/constants/channels/a3.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/a3.mpd"
   },
   {
     "Nº": 4,
     "NOMBRE": "Cuatro",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/4_cuatro.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/cuatro.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/cuatro.mpd"
   },
   {
     "Nº": 5,
     "NOMBRE": "Telecinco",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/5_t5.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/t5.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/t5.mpd"
   },
   {
     "Nº": 6,
     "NOMBRE": "LaSexta",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/6_l6.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/la6.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/la6.mpd"
   },
   {
     "Nº": 7,
@@ -162,25 +162,25 @@
     "Nº": 32,
     "NOMBRE": "Divinity",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/16_divinity.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/dvnty.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/dvnty.mpd"
   },
   {
     "Nº": 33,
     "NOMBRE": "Nova",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/12_nova.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/nova.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/nova.mpd"
   },
   {
     "Nº": 34,
     "NOMBRE": "Neox",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/11_neox.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/neox.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/neox.mpd"
   },
   {
     "Nº": 35,
     "NOMBRE": "MEGA",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/13_mega.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/mega.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/mega.mpd"
   },
   {
     "Nº": 36,
@@ -192,25 +192,25 @@
     "Nº": 37,
     "NOMBRE": "Energy",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/17_energy.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/energy.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/energy.mpd"
   },
   {
     "Nº": 38,
     "NOMBRE": "FDF",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/15_fdf.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/fdf.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/fdf.mpd"
   },
   {
     "Nº": 39,
     "NOMBRE": "A3Series",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/14_a3s.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/a3s.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/a3s.mpd"
   },
   {
     "Nº": 40,
     "NOMBRE": "BeMad",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/27_bm.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/bmad.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/bmad.mpd"
   },
   {
     "Nº": 41,
@@ -379,7 +379,7 @@
     "Nº": 75,
     "NOMBRE": "Boing",
     "LOGO": "https://raw.githubusercontent.com/Ignac16/Iptv-spain-m3u-1416/refs/heads/main/assets/Logos_de_canales/Blanco/22_boing.png",
-    "STREAM": "https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/boing.mpd"
+    "STREAM": "https://ignac16.github.io/voxel-tv-streams/boing.mpd"
   },
   {
     "Nº": 76,
@@ -428,7 +428,7 @@
   {
     "Nº": 84,
     "NOMBRE": "CNN International",
-    "STREAM": "https://jmp2.uk/stvp-ES34000039I "
+    "STREAM": "https://ds2c506obo7m8.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-7zjq3tdqasbg8/index.m3u8"
   },
   {
     "Nº": 85,
