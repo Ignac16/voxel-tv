@@ -1,180 +1,173 @@
-import { Image } from 'expo-image';
-import { SymbolView } from 'expo-symbols';
-import { Platform, Pressable, ScrollView, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, ScrollView, View, TouchableOpacity, Image, Modal, Text } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { ExternalLink } from '@/components/external-link';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Collapsible } from '@/components/ui/collapsible';
+import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-import { useTheme } from '@/hooks/use-theme';
+import { loadChannels } from '@/utils/loadChannels';
 
-export default function TabTwoScreen() {
+export default function ChannelsScreen() {
+  const channels = loadChannels();
+  const [selectedChannel, setSelectedChannel] = useState<any>(null);
   const safeAreaInsets = useSafeAreaInsets();
-  const insets = {
-    ...safeAreaInsets,
-    bottom: safeAreaInsets.bottom + BottomTabInset + Spacing.three,
-  };
-  const theme = useTheme();
 
-  const contentPlatformStyle = Platform.select({
-    android: {
-      paddingTop: insets.top,
-      paddingLeft: insets.left,
-      paddingRight: insets.right,
-      paddingBottom: insets.bottom,
-    },
-    web: {
-      paddingTop: Spacing.six,
-      paddingBottom: Spacing.four,
-    },
-  });
+  const handleChannelPress = (channel: any) => {
+    console.log('Channel pressed:', channel.NOMBRE, 'Stream:', channel.STREAM);
+    if (channel.STREAM) {
+      setSelectedChannel(channel);
+    } else {
+      console.log('No stream available for this channel');
+    }
+  };
+
+  const handleClosePlayer = () => {
+    setSelectedChannel(null);
+  };
 
   return (
-    <ScrollView
-      style={[styles.scrollView, { backgroundColor: theme.background }]}
-      contentInset={insets}
-      contentContainerStyle={[styles.contentContainer, contentPlatformStyle]}>
-      <ThemedView style={styles.container}>
-        <ThemedView style={styles.titleContainer}>
-          <AnimatedIcon />
-          <ThemedText type="title">📺 Channels</ThemedText>
-          <ThemedText style={styles.centerText} themeColor="textSecondary">
-            This page is where you can explore{'\n'} different channels categories.
-          </ThemedText>
+    <ThemedView style={styles.container}>
+      <ScrollView 
+        style={styles.scrollView} 
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        <ThemedText type="title" style={styles.title}>
+          All Channels
+        </ThemedText>
 
-          <ExternalLink href="https://docs.expo.dev" asChild>
-            <Pressable style={({ pressed }) => pressed && styles.pressed}>
-              <ThemedView type="backgroundElement" style={styles.linkButton}>
-                <ThemedText type="link">Expo documentation</ThemedText>
-                <SymbolView
-                  tintColor={theme.text}
-                  name={{ ios: 'arrow.up.right.square', android: 'link', web: 'link' }}
-                  size={12}
+        {channels.map((channel) => (
+          <TouchableOpacity
+            key={channel['Nº']}
+            onPress={() => handleChannelPress(channel)}
+            disabled={!channel.STREAM}
+            style={styles.channelItem}
+          >
+            <ThemedView type="backgroundElement" style={styles.channelCard}>
+              {channel.LOGO ? (
+                <Image 
+                  source={{ uri: channel.LOGO }} 
+                  style={styles.channelLogo}
+                  resizeMode="contain"
                 />
-              </ThemedView>
-            </Pressable>
-          </ExternalLink>
-        </ThemedView>
-
-        <ThemedView style={styles.sectionsWrapper}>
-          <Collapsible title="File-based routing">
-            <ThemedText type="small">
-              This app has two screens: <ThemedText type="code">src/app/index.tsx</ThemedText> and{' '}
-              <ThemedText type="code">src/app/explore.tsx</ThemedText>
-            </ThemedText>
-            <ThemedText type="small">
-              The layout file in <ThemedText type="code">src/app/_layout.tsx</ThemedText> sets up
-              the tab navigator.
-            </ThemedText>
-            <ExternalLink href="https://docs.expo.dev/router/introduction">
-              <ThemedText type="linkPrimary">Learn more</ThemedText>
-            </ExternalLink>
-          </Collapsible>
-
-          <Collapsible title="Android, iOS, and web support">
-            <ThemedView type="backgroundElement" style={styles.collapsibleContent}>
-              <ThemedText type="small">
-                You can open this project on Android, iOS, and the web. To open the web version,
-                press <ThemedText type="smallBold">w</ThemedText> in the terminal running this
-                project.
-              </ThemedText>
-              <Image
-                source={require('@/assets/images/tutorial-web.png')}
-                style={styles.imageTutorial}
-              />
+              ) : (
+                <View style={styles.channelInfo}>
+                  <ThemedText type="subtitle" style={styles.channelNumber}>
+                    {channel['Nº']}
+                  </ThemedText>
+                  <ThemedText type="default" style={styles.channelName}>
+                    {channel.NOMBRE}
+                  </ThemedText>
+                </View>
+              )}
             </ThemedView>
-          </Collapsible>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
 
-          <Collapsible title="Images">
-            <ThemedText type="small">
-              For static images, you can use the <ThemedText type="code">@2x</ThemedText> and{' '}
-              <ThemedText type="code">@3x</ThemedText> suffixes to provide files for different
-              screen densities.
+      <Modal
+        visible={!!selectedChannel}
+        animationType="slide"
+        onRequestClose={handleClosePlayer}
+      >
+        <View style={styles.modalContainer}>
+          <View style={styles.modalHeader}>
+            <TouchableOpacity onPress={handleClosePlayer} style={styles.backButton}>
+              <Text style={styles.backButtonText}>← Back</Text>
+            </TouchableOpacity>
+            <ThemedText type="default" style={styles.modalTitle}>
+              {selectedChannel?.NOMBRE || 'Channel'}
             </ThemedText>
-            <Image source={require('@/assets/images/react-logo.png')} style={styles.imageReact} />
-            <ExternalLink href="https://reactnative.dev/docs/images">
-              <ThemedText type="linkPrimary">Learn more</ThemedText>
-            </ExternalLink>
-          </Collapsible>
+            <View style={styles.placeholder} />
+          </View>
 
-          <Collapsible title="Light and dark mode components">
-            <ThemedText type="small">
-              This template has light and dark mode support. The{' '}
-              <ThemedText type="code">useColorScheme()</ThemedText> hook lets you inspect what the
-              user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-            </ThemedText>
-            <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-              <ThemedText type="linkPrimary">Learn more</ThemedText>
-            </ExternalLink>
-          </Collapsible>
-
-          <Collapsible title="Animations">
-            <ThemedText type="small">
-              This template includes an example of an animated component. The{' '}
-              <ThemedText type="code">src/components/ui/collapsible.tsx</ThemedText> component uses
-              the powerful <ThemedText type="code">react-native-reanimated</ThemedText> library to
-              animate opening this hint.
-            </ThemedText>
-          </Collapsible>
-        </ThemedView>
-      </ThemedView>
-    </ScrollView>
+          {selectedChannel?.STREAM && (
+            <CustomVideoPlayer
+              sourceUrl={selectedChannel.STREAM.trim()}
+              useNativeControls={true}
+              autoPlay={true}
+              onLoad={() => console.log('Channel loaded:', selectedChannel.NOMBRE)}
+              onError={(error) => console.error('Channel error:', error)}
+            />
+          )}
+        </View>
+      </Modal>
+    </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   scrollView: {
     flex: 1,
   },
-  contentContainer: {
+  scrollContent: {
+    padding: Spacing.four,
+    paddingBottom: BottomTabInset + Spacing.four,
+  },
+  title: {
+    marginBottom: Spacing.four,
+  },
+  channelItem: {
+    marginBottom: Spacing.three,
+  },
+  channelCard: {
     flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  container: {
-    maxWidth: MaxContentWidth,
-    flexGrow: 1,
-  },
-  titleContainer: {
-    gap: Spacing.three,
     alignItems: 'center',
-    paddingHorizontal: Spacing.four,
-    paddingVertical: Spacing.six,
+    justifyContent: 'center',
+    padding: Spacing.four,
+    borderRadius: Spacing.three,
+    minHeight: 100,
   },
-  centerText: {
+  channelLogo: {
+    width: 100,
+    height: 60,
+    resizeMode: 'contain',
+  },
+  channelInfo: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  channelNumber: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: Spacing.one,
+  },
+  channelName: {
+    fontSize: 16,
     textAlign: 'center',
   },
-  pressed: {
-    opacity: 0.7,
+  modalContainer: {
+    flex: 1,
+    backgroundColor: '#000',
   },
-  linkButton: {
+  modalHeader: {
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.two,
-    borderRadius: Spacing.five,
-    justifyContent: 'center',
-    gap: Spacing.one,
-    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
   },
-  sectionsWrapper: {
-    gap: Spacing.five,
-    paddingHorizontal: Spacing.four,
-    paddingTop: Spacing.three,
+  backButton: {
+    padding: Spacing.two,
   },
-  collapsibleContent: {
-    alignItems: 'center',
+  backButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
-  imageTutorial: {
-    width: '100%',
-    aspectRatio: 296 / 171,
-    borderRadius: Spacing.three,
-    marginTop: Spacing.two,
+  modalTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    flex: 1,
+    textAlign: 'center',
   },
-  imageReact: {
-    width: 100,
-    height: 100,
-    alignSelf: 'center',
+  placeholder: {
+    width: 60,
   },
 });

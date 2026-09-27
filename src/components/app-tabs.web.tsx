@@ -27,8 +27,8 @@ export default function AppTabs() {
           <TabTrigger name="channels" href="/channels" asChild>
             <TabButton>Channels</TabButton>
           </TabTrigger>
-          <TabTrigger name="explore" href="/explore" asChild>
-            <TabButton>Explore</TabButton>
+          <TabTrigger name="media" href="/media" asChild>
+            <TabButton>Media</TabButton>
           </TabTrigger>
         </CustomTabList>
       </TabList>

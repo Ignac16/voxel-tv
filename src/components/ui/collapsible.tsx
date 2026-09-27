@@ -27,7 +27,7 @@ export function Collapsible({ children, title }: PropsWithChildren & { title: st
           />
         </ThemedView>
 
-        <ThemedText type="small">{title}</ThemedText>
+        <ThemedText type="default" style={styles.largeTitle}>{title}</ThemedText>
       </Pressable>
       {isOpen && (
         <Animated.View entering={FadeIn.duration(200)}>
@@ -61,5 +61,9 @@ const styles = StyleSheet.create({
     borderRadius: Spacing.three,
     marginLeft: Spacing.four,
     padding: Spacing.four,
+  },
+  largeTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
 });
