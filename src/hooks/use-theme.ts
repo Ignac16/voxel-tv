@@ -4,11 +4,28 @@
  */
 
 import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import React from 'react';
+
+const ThemeContext = React.createContext<{
+  theme: 'dark';
+}>({
+  theme: 'dark',
+});
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  return React.createElement(
+    ThemeContext.Provider,
+    { value: { theme: 'dark' } },
+    children
+  );
+}
 
 export function useTheme() {
-  const scheme = useColorScheme();
-  const theme = scheme === 'unspecified' ? 'light' : scheme;
+  const context = React.useContext(ThemeContext);
+  const colors = Colors.dark;
 
-  return Colors[theme];
+  return {
+    ...colors,
+    dark: true,
+  };
 }

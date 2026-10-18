@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, View, TouchableOpacity, Image, Modal, Text } from 'react-native';
+import { StyleSheet, ScrollView, View, TouchableOpacity, Image, Modal, Text, TextInput } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -7,11 +7,14 @@ import { ThemedView } from '@/components/themed-view';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 import { loadChannels } from '@/utils/loadChannels';
+import { useTheme } from '@/hooks/use-theme';
 
 export default function ChannelsScreen() {
   const channels = loadChannels();
   const [selectedChannel, setSelectedChannel] = useState<any>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const safeAreaInsets = useSafeAreaInsets();
+  const theme = useTheme();
 
   const handleChannelPress = (channel: any) => {
     console.log('Channel pressed:', channel.NOMBRE, 'Stream:', channel.STREAM);
@@ -26,6 +29,15 @@ export default function ChannelsScreen() {
     setSelectedChannel(null);
   };
 
+  const filteredChannels = channels.filter((channel: any) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      channel.NOMBRE?.toLowerCase().includes(query) ||
+      channel['Nº']?.toString().includes(query) ||
+      (channel.LOGO && channel.LOGO.toLowerCase().includes(query))
+    );
+  });
+
   return (
     <ThemedView style={styles.container}>
       <ScrollView 
@@ -37,7 +49,29 @@ export default function ChannelsScreen() {
           All Channels
         </ThemedText>
 
-        {channels.map((channel) => (
+        <ThemedView type="backgroundElement" style={styles.searchContainer}>
+          <View style={styles.searchIconContainer}>
+            <Image 
+              source={require('@/assets/images/glass.png')} 
+              style={styles.searchIcon}
+              resizeMode="contain"
+            />
+          </View>
+          <TextInput
+            style={[styles.searchInput, { color: theme.text }]}
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            placeholder="Search channels..."
+            placeholderTextColor={theme.textSecondary}
+          />
+            {searchQuery.length > 0 && (
+              <TouchableOpacity onPress={() => setSearchQuery('')} style={styles.clearButton}>
+                <ThemedText style={styles.clearText}>✕</ThemedText>
+              </TouchableOpacity>
+            )}
+        </ThemedView>
+
+        {filteredChannels.map((channel) => (
           <TouchableOpacity
             key={channel['Nº']}
             onPress={() => handleChannelPress(channel)}
@@ -110,6 +144,38 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: Spacing.four,
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    borderRadius: Spacing.three,
+    gap: Spacing.two,
+    marginBottom: Spacing.three,
+  },
+  searchIconContainer: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  searchIcon: {
+    width: 20,
+    height: 20,
+    tintColor: '#fff',
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 16,
+    padding: 0,
+  },
+  clearButton: {
+    padding: Spacing.one,
+  },
+  clearText: {
+    fontSize: 18,
   },
   channelItem: {
     marginBottom: Spacing.three,
