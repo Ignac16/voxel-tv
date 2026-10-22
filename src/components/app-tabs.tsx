@@ -15,7 +15,6 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/home.png')}
           renderingMode="template"
-          tintColor={theme.text}
         />
       </NativeTabs.Trigger>
 
@@ -24,7 +23,6 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
-          tintColor={theme.text}
         />
       </NativeTabs.Trigger>
 
@@ -33,7 +31,6 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/media.png')}
           renderingMode="template"
-          tintColor={theme.text}
         />
       </NativeTabs.Trigger>
     </NativeTabs>
