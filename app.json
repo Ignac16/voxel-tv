@@ -42,7 +42,8 @@
       "expo-status-bar",
       "expo-web-browser",
       "expo-screen-orientation",
-      "expo-video"
+      "expo-video",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,

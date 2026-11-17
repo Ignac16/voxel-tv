@@ -4,6 +4,7 @@ import { Platform, StyleSheet, ScrollView, View, Modal, TouchableOpacity, Text, 
 import { Image } from 'expo-image';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Font } from '@/constants/theme';
 
 import { AnimatedIcon } from '@/components/animated-icon';
 import { HintRow } from '@/components/hint-row';
@@ -335,7 +336,7 @@ export default function HomeScreen() {
 
           <ScrollView style={styles.settingsScrollView}>
             <ThemedView style={styles.settingsSection}>
-              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text }]}>
+              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text, fontFamily: Font.bold }]}>
                 Mi Perfil
               </ThemedText>
               <TouchableOpacity style={styles.settingsItem}>
@@ -350,7 +351,7 @@ export default function HomeScreen() {
             </ThemedView>
 
             <ThemedView style={styles.settingsSection}>
-              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text }]}>
+              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text, fontFamily: Font.bold }]}>
                 Notificaciones
               </ThemedText>
               <TouchableOpacity style={styles.settingsItem} onPress={toggleNewReleases}>
@@ -412,7 +413,7 @@ export default function HomeScreen() {
 
           <ScrollView style={styles.settingsScrollView}>
             <ThemedView style={styles.settingsSection}>
-              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text }]}>
+              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text, fontFamily: Font.bold }]}>
                 Foto de perfil
               </ThemedText>
               <View style={styles.profileGrid}>
@@ -450,7 +451,7 @@ export default function HomeScreen() {
             </ThemedView>
 
             <ThemedView style={styles.settingsSection}>
-              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text }]}>
+              <ThemedText type="default" style={[styles.sectionTitle, { color: theme.text, fontFamily: Font.bold }]}>
                 Nombre
               </ThemedText>
               <TouchableOpacity style={styles.settingsItem}>
@@ -632,6 +633,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily: Font.bold,
   },
   scrollView: {
     flex: 1,
@@ -653,6 +655,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     alignSelf: 'flex-start',
     marginTop: Spacing.four,
+    fontFamily: Font.regular,
   },
   searchContainer: {
     flexDirection: 'row',
@@ -679,12 +682,14 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     padding: 0,
+    fontFamily: Font.regular,
   },
   clearButton: {
     padding: Spacing.one,
   },
   clearText: {
     fontSize: 18,
+    fontFamily: Font.regular,
   },
   modalContainer: {
     flex: 1,
@@ -705,6 +710,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: Font.semibold,
   },
   modalTitle: {
     color: '#fff',
@@ -712,6 +718,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     flex: 1,
     textAlign: 'center',
+    fontFamily: Font.bold,
   },
   placeholder: {
     width: 60,
@@ -738,6 +745,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: Spacing.three,
     color: '#fff',
+    fontFamily: Font.bold,
   },
   settingsItem: {
     paddingVertical: Spacing.three,
@@ -761,6 +769,7 @@ const styles = StyleSheet.create({
     marginTop: Spacing.six,
     color: '#888',
     fontSize: 16,
+    fontFamily: Font.regular,
   },
   profileGrid: {
     flexDirection: 'row',
@@ -793,6 +802,7 @@ const styles = StyleSheet.create({
   failedImageText: {
     color: '#fff',
     fontSize: 12,
+    fontFamily: Font.regular,
   },
   profileListContainer: {
     paddingVertical: Spacing.three,
@@ -817,6 +827,7 @@ const styles = StyleSheet.create({
   profileListText: {
     flex: 1,
     fontSize: 16,
+    fontFamily: Font.regular,
   },
   checkmark: {
     width: 24,
@@ -830,6 +841,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily: Font.bold,
   },
   editProfileItem: {
     flexDirection: 'row',
@@ -852,6 +864,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     borderRadius: 8,
     marginRight: Spacing.two,
+    fontFamily: Font.regular,
   },
   deleteButton: {
     padding: Spacing.two,
